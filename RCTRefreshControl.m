@@ -21,7 +21,7 @@ RCT_EXPORT_MODULE()
   return self.bridge.uiManager.methodQueue;
 }
 
-RCT_EXPORT_METHOD(configure:(NSNumber *)reactTag
+RCT_EXPORT_METHOD(configure:(nonnull NSNumber *)reactTag
                   options:(NSDictionary *)options
                   callback:(RCTResponseSenderBlock)callback) {
   [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
