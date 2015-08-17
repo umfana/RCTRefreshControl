@@ -50,7 +50,7 @@ RCT_EXPORT_METHOD(configure:(nonnull NSNumber *)reactTag
   }];
 }
 
-RCT_EXPORT_METHOD(beginRefreshing:(NSNumber *)reactTag) {
+RCT_EXPORT_METHOD(beginRefreshing:(nonnull NSNumber *)reactTag) {
   [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
     
     UIView *view = viewRegistry[reactTag];
@@ -69,7 +69,7 @@ RCT_EXPORT_METHOD(beginRefreshing:(NSNumber *)reactTag) {
   }];
 }
 
-RCT_EXPORT_METHOD(endRefreshing:(NSNumber *)reactTag) {
+RCT_EXPORT_METHOD(endRefreshing:(nonnull NSNumber *)reactTag) {
   [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
     
     UIView *view = viewRegistry[reactTag];
